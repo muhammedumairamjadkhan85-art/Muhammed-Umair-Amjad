@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root, html.dark {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+
+    /* Pure Luxury Black & 24K Gold System - Zero White */
+    --color-canvas: #050507;
+    --color-surface: #0C0C10;
+    --color-surface-subtle: #121218;
+    --color-surface-elevated: #181820;
+    --color-text-primary: #F3E5C8;
+    --color-text-muted: #9E8E72;
+    --color-border: #2D2415;
+    --color-border-subtle: #1F190F;
+    --color-accent-primary: #D4AF37;
+    --color-accent-gold: #F5D77F;
+    --color-accent-glow: rgba(212, 175, 55, 0.16);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #050507;
+    color: #F3E5C8;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom 24K Gold Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #050507;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D2415;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Gold Text Shimmer Utility */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF0C2 0%, #D4AF37 50%, #B8860B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Metallic Gold Button Gradient */
+.gold-btn-gradient {
+  background: linear-gradient(135deg, #F3D374 0%, #D4AF37 50%, #A6780C 100%);
+  color: #070604;
+}
+
+.gold-btn-gradient:hover {
+  background: linear-gradient(135deg, #FCE08E 0%, #E2BE4C 50%, #B58410 100%);
+  color: #000000;
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
